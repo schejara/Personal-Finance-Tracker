@@ -39,6 +39,9 @@ function Nav() {
         <Link className="navLink" to="/Dashboard">
           Dashboard
         </Link>
+        <Link className="navLink" to="/TransactionList">
+        TransactionList
+        </Link>
       </div>
     </div>
   );

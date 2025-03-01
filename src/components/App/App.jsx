@@ -7,7 +7,7 @@ import {
 } from 'react-router-dom';
 
 import { useDispatch, useSelector } from 'react-redux';
-
+import TransactionList from '../TransactionList';
 import Nav from '../Nav/Nav';
 import Footer from '../Footer/Footer';
 
@@ -46,6 +46,13 @@ function App() {
             path="/Dashboard"
           >
             <Dashboard />
+          </Route>
+          <Route
+            // shows AboutPage at all times (logged in or not)
+            exact
+            path="/TransactionList"
+          >
+            <TransactionList />
           </Route>
 
           {/* For protected routes, the view could show one of several things on the same route.

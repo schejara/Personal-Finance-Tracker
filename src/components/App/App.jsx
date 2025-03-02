@@ -7,7 +7,7 @@ import {
 } from 'react-router-dom';
 
 import { useDispatch, useSelector } from 'react-redux';
-import TransactionList from '../TransactionList';
+import TransactionList from '../TransactionList/TransactionList';
 import Nav from '../Nav/Nav';
 import Footer from '../Footer/Footer';
 

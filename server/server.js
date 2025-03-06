@@ -9,7 +9,7 @@ const passport = require('./strategies/user.strategy');
 
 // Route Includes
 const userRouter = require('./routes/user.router');
-
+const categoryRouter = require('./routes/category.router');
 // Express Middleware
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
@@ -21,7 +21,7 @@ app.use(sessionMiddleware);
 // Start Passport Sessions
 app.use(passport.initialize());
 app.use(passport.session());
-
+app.use('/api/category',categoryRouter);
 // Routes
 app.use('/api/user', userRouter);
 

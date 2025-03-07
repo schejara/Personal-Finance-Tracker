@@ -7,8 +7,8 @@ const {
 
 
 router.get("/", rejectUnauthenticated, (req, res) => {
-  const queryText = "SELECT * FROM Categories;";
-
+  const queryText = "SELECT * FROM categories;";
+ console.log('query text',queryText);
   pool
     .query(queryText)
     .then((results) => res.send(results.rows))

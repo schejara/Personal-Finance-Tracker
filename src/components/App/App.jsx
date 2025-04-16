@@ -12,7 +12,7 @@ import Nav from '../Nav/Nav';
 import Footer from '../Footer/Footer';
 import Categories from '../Categories/Categories';
 import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';
-
+import RecurringTransactions from '../RecurringTransactions/RecurringTransactions';
 import Dashboard from '../Dashboard/Dashboard';
 import UserPage from '../UserPage/UserPage';
 import InfoPage from '../InfoPage/InfoPage';
@@ -53,6 +53,13 @@ function App() {
             path="/TransactionList"
           >
             <TransactionList />
+          </Route>
+          <Route
+            // shows AboutPage at all times (logged in or not)
+            exact
+            path="/RecurringTransactions"
+          >
+            <RecurringTransactions/>
           </Route>
           <Route
             // shows AboutPage at all times (logged in or not)

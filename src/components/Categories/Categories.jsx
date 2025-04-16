@@ -2,6 +2,7 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import { useEffect } from "react";
+import './Categories.css';
 
 
 function Categories (){
@@ -14,17 +15,27 @@ function Categories (){
     }, [dispatch]);
 
 return(
-    <tr>
-    <h1>This is a category page</h1>
-    {categoryList.map((item) => (
-        <tr key={item.id}>
-        <td>{item.user_id}</td>                          
-        <td>{item.name}</td>
-        <td>{item.type}</td>                          
-        
-    </tr>
-    ))}
-    </tr>
+    <div className="categories-container">
+            <h1 className="categories-title">Categories</h1>
+            <table className="categories-table">
+                <thead>
+                    <tr>
+                        <th>User ID</th>
+                        <th>Name</th>
+                        <th>Type</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {categoryList.map((item) => (
+                        <tr key={item.id}>
+                            <td>{item.user_id}</td>
+                            <td>{item.name}</td>
+                            <td className={`type-${item.type}`}>{item.type}</td>
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
+        </div>
 
 
 )

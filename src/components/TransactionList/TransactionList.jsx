@@ -6,7 +6,7 @@ import './TransactionList.css';
 
 
 function TransactionList(){
-    const transactionItem = useSelector((store) => store.transactionListReducer.items);
+    const transactionListItem = useSelector((store) => store.transactionListReducer.items);
     const dispatch = useDispatch();
     useEffect(() => {
         dispatch ({type : 'FETCH_TRANSACTION_LIST'})
@@ -31,7 +31,7 @@ function TransactionList(){
                     </tr>
                 </thead>
                 <tbody>
-                    {transactionItem.map((item) => (
+                    {transactionListItem.map((item) => (
                         <tr key={item.id}>
                             <td>{item.user_id}</td>
                             <td>{item.account_id}</td>

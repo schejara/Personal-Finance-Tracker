@@ -19,7 +19,7 @@ import InfoPage from '../InfoPage/InfoPage';
 import LandingPage from '../LandingPage/LandingPage';
 import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
-
+import Budgets from '../Budgets/Budgets';
 import './App.css';
 
 function App() {
@@ -62,11 +62,18 @@ function App() {
             <RecurringTransactions/>
           </Route>
           <Route
-            // shows AboutPage at all times (logged in or not)
+           
             exact
             path="/Categories"
           >
             <Categories />
+          </Route>
+          <Route
+            
+            exact
+            path="/Budgets"
+          >
+            <Budgets />
           </Route>
 
           {/* For protected routes, the view could show one of several things on the same route.

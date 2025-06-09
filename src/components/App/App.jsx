@@ -20,6 +20,7 @@ import LandingPage from '../LandingPage/LandingPage';
 import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
 import Budgets from '../Budgets/Budgets';
+import AccountsSummary from '../AccountsSummary/AccountsSummary';
 import './App.css';
 
 function App() {
@@ -53,6 +54,13 @@ function App() {
             path="/TransactionList"
           >
             <TransactionList />
+          </Route>
+          <Route
+            // shows AboutPage at all times (logged in or not)
+            exact
+            path="/AccountsSummary"
+          >
+            <AccountsSummary/>
           </Route>
           <Route
             // shows AboutPage at all times (logged in or not)
